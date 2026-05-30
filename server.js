@@ -36,7 +36,8 @@ app.post('/analyse-outfit', upload.fields([
         I want you to return the color and type of the top and bottom, like is the top is a shirt or t-shirt or a jacket, and the color of the top. 
         Do the same for the bottom like if it is a short or pant or something else. I want you to return the result in JSON format, specifying the type and color of the top and bottom. 
         NO bullet points, no markdown stuff, only a JSON response, giving the type and color of the top and bottom. 
-        And one more important thing, if any of the image is not of an outfit, just write null as the value for that part such that i can check if the user has uploaded an image of an outfit or not. 
+        And one more important thing, if any of the image is not of an outfit, just write null as the value for that part such that i can check if the user has uploaded an image of an outfit or not.
+        The type you have to return are only: shirt, t-shirt, hoodie, blazer, sweater, top, t-shirt, kurti, blouse, jeans, trousers, shorts, pant, pants, skirt, leggings. If the clothing item is other than these, declare it with most similar type suitable with given types.
         Return the result in exactly this structure and nothing else:
         {
             "top": {
